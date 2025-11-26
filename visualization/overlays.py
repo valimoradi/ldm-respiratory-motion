@@ -291,8 +291,6 @@ class DVFOverlay:
         saved = []
 
         for view, axis, idx in self._iter_slices(vol, views, num_slices, start_from):
-            if view == "sagittal" or view == "coronal":
-                idx = 70
             slice = get_ct_view(vol_np, view=view, idx=idx)
             displacement_rows, displacement_cols = get_dvf_components(
                 dvf_np, view=view, idx=idx
