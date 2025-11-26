@@ -2,7 +2,7 @@
 
 ![Demo GIF](coronal_cycle.gif)
 
-This repository contains code for data processing, training, and inference of the latent diffusion models used in *Synthesis of respiratory motion in CT images using latent diffusion models*, submitted to SPIE Medical Imaging 2026 (under review). 
+This repository contains code for data processing, training, and inference of the latent diffusion models used in *Synthesis of respiratory motion in CT images using latent diffusion models*, to be [presented at SPIE Medical Imaging 2026](https://spie.org/medical-imaging/presentation/Synthesis-of-respiratory-motion-in-CT-images-using-latent-diffusion/13924-35/). 
 
 - [Synthesis of respiratory motion in CT images using latent diffusion models](#synthesis-of-respiratory-motion-in-ct-images-using-latent-diffusion-models)
   - [Dataset information](#dataset-information)
