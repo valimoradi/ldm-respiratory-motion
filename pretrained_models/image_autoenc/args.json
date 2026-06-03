@@ -1,0 +1,51 @@
+{
+    "model_args": {
+        "in_channels": 1,
+        "base_channels": 128,
+        "latent_channels": 3,
+        "out_channels": 1,
+        "layer_type": "double_res",
+        "keep_z": [
+            true,
+            true,
+            true
+        ],
+        "channel_multipliers": [
+            1,
+            2,
+            4
+        ],
+        "kernel_size": 3,
+        "stride": 1,
+        "padding": 1,
+        "norm": "instance"
+    },
+    "train_args": {
+        "save_path": "/local/tmp.4856537/models/auto_encoders/2025-08-04_12-04-42",
+        "input_data_path": "/mimer/NOBACKUP/groups/mi_physics_dl/glad/data/idc_downloads",
+        "batch_size": 1,
+        "train_ratio": 0.8,
+        "val_ratio": 0.1,
+        "test_ratio": 0.1,
+        "num_data_loader_workers": 2,
+        "n_epochs": 80,
+        "save_iters": 500,
+        "slice_views": [
+            "axial",
+            "coronal",
+            "sagittal"
+        ],
+        "optimizer": "adamw",
+        "loss_fn": "lpe",
+        "l1_factor": 0.65,
+        "edge_factor": 0.05,
+        "perceptual_loss_type": "ssim",
+        "warmup_steps": 600,
+        "lr_max": 5e-05,
+        "lr_min": 1e-06,
+        "gradient_accumulation_steps": 16,
+        "dropout_rate": 0.05,
+        "data_loader_seed": 42,
+        "lr_scheduler": "cosine"
+    }
+}

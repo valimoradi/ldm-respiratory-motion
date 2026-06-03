@@ -1,0 +1,44 @@
+{
+    "model_args": {
+        "image_width": 32,
+        "image_depth": 50,
+        "in_channels": 12,
+        "n_layers": 3,
+        "base_channels": 128,
+        "out_channels": 9,
+        "layer_type": "double_res",
+        "keep_z": [
+            false,
+            true,
+            true
+        ],
+        "noise_schedule": "linear",
+        "norm": "group",
+        "dvf_scale_factor": 10
+    },
+    "train_args": {
+        "T": 1000,
+        "save_path": "/local/tmp.4909415/models/diffusion/2025-08-18_10-59-49",
+        "input_data_path": "/mimer/NOBACKUP/groups/mi_physics_dl/glad/data/latent_idc_downloads",
+        "batch_size": 12,
+        "train_ratio": 0.8,
+        "val_ratio": 0.1,
+        "test_ratio": 0.1,
+        "num_data_loader_workers": 1,
+        "n_epochs": 600,
+        "save_iters": 5000,
+        "optimizer": "adamw",
+        "loss_fn": "mse",
+        "warmup_steps": 70,
+        "lr_max": 5e-05,
+        "lr_min": 1e-09,
+        "gradient_accumulation_steps": 1,
+        "dropout_rate": 0.05,
+        "metrics_t": 50,
+        "data_loader_seed": 42,
+        "lr_scheduler": "cosine",
+        "resample_target_dim": null,
+        "use_warm_checkpoint": false,
+        "warm_checkpoint_path": null
+    }
+}

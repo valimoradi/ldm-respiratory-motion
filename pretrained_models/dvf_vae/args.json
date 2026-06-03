@@ -1,0 +1,53 @@
+{
+    "model_args": {
+        "variational": true,
+        "in_channels": 3,
+        "base_channels": 96,
+        "latent_channels": 9,
+        "out_channels": 3,
+        "layer_type": "double_res",
+        "keep_z": [
+            true,
+            true,
+            true
+        ],
+        "channel_multipliers": [
+            1,
+            2,
+            4
+        ],
+        "kernel_size": 3,
+        "stride": 1,
+        "padding": 1,
+        "norm": "group",
+        "dvf_scale_factor": 10
+    },
+    "train_args": {
+        "save_path": "/local/tmp.4906570/models/auto_encoders/2025-08-17_10-26-54",
+        "input_data_path": "/mimer/NOBACKUP/groups/mi_physics_dl/glad/data/idc_downloads",
+        "batch_size": 1,
+        "train_ratio": 0.8,
+        "val_ratio": 0.1,
+        "test_ratio": 0.1,
+        "num_data_loader_workers": 2,
+        "n_epochs": 200,
+        "save_iters": 1000,
+        "slice_views": [
+            "axial"
+        ],
+        "optimizer": "adamw",
+        "loss_fn": "dvf",
+        "l1_factor": 1,
+        "edge_factor": 0,
+        "perceptual_loss_type": "lpips",
+        "warmup_steps": 400,
+        "lr_max": 0.0001,
+        "lr_min": 3e-06,
+        "gradient_accumulation_steps": 8,
+        "dropout_rate": 0.0,
+        "data_loader_seed": 42,
+        "lr_scheduler": "cosine",
+        "use_warm_checkpoint": false,
+        "warm_checkpoint_path": "/mimer/NOBACKUP/groups/mi_physics_dl/glad/models/test_warm_start/08-04-50x32x32-ssim_loss/4500iter.pt"
+    }
+}
